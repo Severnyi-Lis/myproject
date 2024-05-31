@@ -1,4 +1,12 @@
-<h1>Мои задачи</h1>
+<h1>Список дел на {{kogda}}</h1>
 <ol>
-    <li>Не опаздывать</li>
+{% for task in tasks %}
+<li>
+    {% if task.done %}
+        <s>{{task.description}}</s>
+    {% else %}
+        <b>{{task.description}}</b>
+    {% endif %}
+</li>
+{% endfor %}
 </ol>
