@@ -39,3 +39,20 @@ def index(request):
             ],
         }
     )                   
+from .forms import TaskForm
+
+def new_task(request):
+    if request.method == "POST":
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+            form.save()
+    #else:
+    context = {
+        'form': TaskForm(),
+    }
+    return render(
+        request,                  # Запрос
+	    'mainpage/newtask.html',  # путь к шаблону
+        context                   # подстановки
+    )
