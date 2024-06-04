@@ -8,6 +8,7 @@ class Task(models.Model):
     deadline = models. DateTimeField(null=True)
     description = models.CharField(max_length=512)
     done = models.BooleanField(default=False)
+    category = models.CharField(default="#ff0000")
 class Cat(models.Model):
     opisanie = models.CharField(max_length=512)
     catborn = models.DateTimeField()
@@ -15,3 +16,5 @@ class Cat(models.Model):
     poroda = models.CharField(max_length=512)
     namecat = models.CharField(max_length=512)
     polcat = models.BooleanField(default=False)
+
+   
