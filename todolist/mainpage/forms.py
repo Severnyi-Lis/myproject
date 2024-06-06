@@ -1,6 +1,6 @@
 from django import forms
 from .models import Task
-
+from .models import Cat
 class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
@@ -13,4 +13,5 @@ class TaskForm(forms.ModelForm):
             'deadline': forms.DateInput(attrs={'type':'datetime-local'}),
             'category': forms.DateInput(attrs={'type':'color'}),
         }
+
    

@@ -1,12 +1,20 @@
-<h1>Список дел на {{kogda}}</h1>
-<ol>
-{% for task in tasks %}
-<li>
-    {% if task.done %}
-        <s>{{task.description}}</s>
-    {% else %}
-        <b>{{task.description}}</b>
-    {% endif %}
-</li>
-{% endfor %}
-</ol>
+{% load static %}
+<link rel = "stylesheet" href="{% static 'mainpage/style.css' %}" >
+<link href="{% static 'mainpage/layout.css' %}" rel="stylesheet">
+<img class="sever" src="{% static 'mainpage/sever.jpg' %}" >
+<h1 class = 'new'> Список дел на {{kogda}} </h1> 
+<article>
+    <ol class = 'new_2'>
+    {% for task in tasks %}
+        <li >
+            {% if task.done %}
+                <s>{{task.description}}</s>
+            {% else %}
+                <b>{{task.description}}</b>
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ol>
+</article>
+<a class = 'zadacha' href="{% url 'new_task' %}">Форма выполнения задачи</a>
+<p><a class = 'cat' href="{% url 'new_cat' %}">Карточка кошки</a></p>

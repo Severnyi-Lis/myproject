@@ -1,0 +1,45 @@
+*{
+    margin:0
+}
+.new{
+    font-size: x-large;
+    text-align: center;
+    font-family: cursive;
+   
+}
+.new_2{
+    font-size: large;
+    text-align: left;
+    font-family: cursive;
+    text-align: center;
+}
+.sever{height: 50vh;
+width: 100vw;
+display: flex;
+float: center;
+}
+article{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    text-align: center;
+    border-style: groove;
+    position: relative;
+    left: 81ch;
+    top:5vh;
+}
+.zadacha{
+    font-size: x-large;
+    font-family: cursive;
+    position: relative;
+    top: 10vh;
+    left: 45ch;
+}
+.cat{
+    font-size: x-large;
+    font-family: cursive;
+    position: relative;
+    top: 15vh;
+    left: 50ch;
+}

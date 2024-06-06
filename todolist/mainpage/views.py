@@ -56,3 +56,16 @@ def new_task(request):
 	    'mainpage/newtask.html',  # путь к шаблону
         context                   # подстановки
     )
+
+from .models import Cat
+def new_cat(request):
+    cats = Cat.objects.all()
+    context = {
+        "kogda":'Карточка котенка',
+        "cats":cats,
+    }
+    return render(
+        request,
+        'mainpage/cats.html',
+        context
+    )

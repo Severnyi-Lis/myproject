@@ -1,4 +1,6 @@
-<form action="/newtask/" method="post"> 
+<form action="/newtask/" method="post">
+    {% load static %}
+<link rel = "stylesheet" href="{% static 'mainpage/style.css' %}" > 
     {% csrf_token %}  
         {{ form }} 
     <input type="submit" value="Создать задачу"> 

@@ -1,0 +1,13 @@
+{% load static %}
+<link rel = "stylesheet" href="{% static 'mainpage/style.css' %}" >
+<link href="{% static 'mainpage/layout.css' %}" rel="stylesheet">
+<h1>{{kogda}}</h1>
+<ol>
+{% for t in cats %}
+    <li><p>{{t.opisanie}}</p>
+    {{t.catborn}}
+    {{t.okras}}
+    {{t.poroda}}
+    {{t.namecat}}</li>
+{% endfor %}
+</ol>
