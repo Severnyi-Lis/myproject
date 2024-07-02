@@ -1,0 +1,8 @@
+<h1>Ищу кота</h1>
+<form action='{% url "kitty" %}' method="post" >
+
+{% csrf_token %}
+<input type="text" name="Catname">
+<input type='submit' value='Найти котика'> 
+</form> 
+     

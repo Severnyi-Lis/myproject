@@ -69,3 +69,24 @@ def new_cat(request):
         'mainpage/cats.html',
         context
     )
+def menu(request):
+    context = {}
+    return render(
+        request,
+        "mainpage/menu.html",
+        context
+    )
+def partners(request):
+    context = {}
+    return render(
+        request,
+        "mainpage/partners.html",
+        context
+    )
+def index_2(request):
+    context = {}
+    return render(
+        request,
+        "mainpage/index_2.html",
+        context
+    )  

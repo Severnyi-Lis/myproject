@@ -1,7 +1,5 @@
-{% load static %}
-<link rel = "stylesheet" href="{% static 'mainpage/style.css' %}" >
-<link href="{% static 'mainpage/layout.css' %}" rel="stylesheet">
-<img class="sever" src="{% static 'mainpage/sever.jpg' %}" >
+{% extends 'mainpage/header_footer.html' %}
+{% block content %}
 <h1 class = 'new'> Список дел на {{kogda}} </h1> 
 <article>
     <ol class = 'new_2'>
@@ -18,3 +16,4 @@
 </article>
 <a class = 'zadacha' href="{% url 'new_task' %}">Форма выполнения задачи</a>
 <p><a class = 'cat' href="{% url 'new_cat' %}">Карточка кошки</a></p>
+{% endblock %}

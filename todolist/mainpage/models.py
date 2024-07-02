@@ -17,4 +17,5 @@ class Cat(models.Model):
     namecat = models.CharField(max_length=512)
     polcat = models.BooleanField(default=False)
 
+
    

@@ -20,5 +20,6 @@ from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include ('mainpage.pyti')),
+    path('mainpage/',include ('mainpage.pyti')),
+    path('',include ('search_cat.urls')),
 ]

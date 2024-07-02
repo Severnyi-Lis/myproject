@@ -1,0 +1,13 @@
+{% load static %}
+<link rel = "stylesheet" href="{% static 'mainpage/style.css' %}" >
+<link href="{% static 'mainpage/layout.css' %}" rel="stylesheet">
+<header>
+<img class="sever" src="{% static 'mainpage/sever.jpg' %}" >
+
+<h1>Четкий сайт для четких клиентов</h1>
+</header>
+
+{% include 'mainpage/menu.html' %}
+
+{% block content %}{% endblock %}
+
