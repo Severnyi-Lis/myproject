@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('mainpage/',include ('mainpage.pyti')),
     path('',include ('search_cat.urls')),
+    path('lotary/',include('lotary.urls')),
 ]

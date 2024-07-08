@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainpage',
     'search_cat',
+    'lotary',
 ]
 
 MIDDLEWARE = [
