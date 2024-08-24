@@ -23,4 +23,6 @@ urlpatterns = [
     path('mainpage/',include ('mainpage.pyti')),
     path('',include ('search_cat.urls')),
     path('lotary/',include('lotary.urls')),
+    path('psicholog/',include('psich.urls')),
+    path('plants/',include('plants.urls')),
 ]

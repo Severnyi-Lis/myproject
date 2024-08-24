@@ -20,11 +20,11 @@ def wins(request):
     congrate = ''
     number = random.randint(1,1000000)
     if number == 1000000:
-        congrate = ' Вы выиграли лимон!'
+        congrate = 'лимон'
     elif number == 1000:
-        congrate = 'Вы выиграли тыщу!'
+        congrate = 'тыщу'
     else:
-        congrate = 'Вы выиграли',number,'руб.'
+        congrate = number
     return render(
         request,
         "lotary/wins.html",

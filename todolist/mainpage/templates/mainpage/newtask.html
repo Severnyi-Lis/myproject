@@ -1,6 +1,6 @@
 {% extends 'mainpage/header_footer.html' %}
 {% block content %}
-<form action="/newtask/" method="post">
+<form action="/mainpage/newtask/" method="post">
     {% load static %}
 <link rel = "stylesheet" href="{% static 'mainpage/style.css' %}" > 
     {% csrf_token %}  

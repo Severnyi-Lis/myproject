@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'mainpage',
     'search_cat',
     'lotary',
+    'psich',
+    'plants',
 ]
 
 MIDDLEWARE = [

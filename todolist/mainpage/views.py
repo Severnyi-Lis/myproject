@@ -44,6 +44,7 @@ from .forms import TaskForm
 def new_task(request):
     if request.method == "POST":
         form = TaskForm(request.POST)
+        print('вот он скотина!',request.POST)
         if form.is_valid():
             print(form.cleaned_data)
             form.save()
