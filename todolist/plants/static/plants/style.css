@@ -1,0 +1,25 @@
+.menu_item{
+    margin:auto 2em auto 2em ;
+}
+.rastenie{
+background-color:rgb(126, 201, 86);
+margin-left:  0;
+margin-right: 0;
+}
+a:link {
+    text-decoration:none;
+    color: rgb(141, 141, 141);
+}
+a:visited {
+    text-decoration:none;
+    color: rgb(141, 141, 141);
+}
+a:active {
+    color: rgb(144, 223, 142);
+}
+a:hover {
+    color: rgb(160, 255, 156);
+} 
+.main{
+    color: rgb(144, 223, 142);
+}
