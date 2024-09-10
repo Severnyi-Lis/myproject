@@ -21,8 +21,8 @@ from django.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('mainpage/',include ('mainpage.pyti')),
-    path('',include ('search_cat.urls')),
+    path('cat',include ('search_cat.urls')),
     path('lotary/',include('lotary.urls')),
     path('psicholog/',include('psich.urls')),
-    path('plants/',include('plants.urls')),
+    path('',include('plants.urls')),
 ]
