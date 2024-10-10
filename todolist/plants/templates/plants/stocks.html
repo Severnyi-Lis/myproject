@@ -1,0 +1,22 @@
+{% extends 'plants/layout.html' %}
+{% block content %}
+{% load static %}
+<h1 id="stocks">Акции</h1>
+<div class="stocks">
+    <div class="pr">
+        <a href="{% url 'stocks_15' %}">
+         <img class="stocks_15" src="{% static 'plants/stocks_15.jpg' %}" >
+        </a>
+    </div>
+    <div class="pr">
+        <a href="{% url 'opt' %}">
+         <img class="opt" src="{% static 'plants/opt.jpeg' %}" >
+        </a>
+    </div>
+    <div class="pr"></div>
+        <a href="{% url 'zakaz' %}">
+         <img class="zakaz" src="{% static 'plants/zakaz.jpg' %}" >
+        </a>
+    </div>
+</div>
+{% endblock %} 

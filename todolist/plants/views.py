@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Rastenie
-
+from .forms import UserRegistrationForm  #, LoginForm 
 
 # Create your views here.
 def layout(request):
@@ -94,14 +94,7 @@ def blog(request):
 
 
 def dostavka(request):
-    stoimost = 'Доставка по Москве - 590 ₽'
-    night    = 'Доставка в вечернее время - 790 ₽'
-    mo       = 'Доставка по МО 590 ₽ + 45 р/1 км'
-    context = {
-        'dostavochka': stoimost,
-        'noch':        night,
-        'oblast':      mo,
-    }
+    context = {}
     return render(
         request,
         "plants/dostavka_oplata.html",
@@ -134,4 +127,69 @@ def index(request):
         context
     )
 
+
+def stocks(request):
+    context = {}
+    return render(
+        request,
+        "plants/stocks.html",
+        context
+    )
+
+
+def stocks_15(request):
+    context = {}
+    return render(
+        request,
+        "plants/stocks_15.html",
+        context
+    )
+
+
+def opt(request):
+    context = {}
+    return render(
+        request,
+        "plants/opt.html",
+        context
+    )
+
+
+def exzotic(request):
+    context = {}
+    return render(
+        request,
+        "plants/exzotic.html",
+        context
+    )
+
+
+def zakaz(request):
+    context = {}
+    return render(
+        request,
+        "plants/zakaz.html",
+        context
+    )
+
+ 
+def register(request): 
+    if request.method == 'POST': 
+        user_form = UserRegistrationForm(request.POST) 
+        if user_form.is_valid(): 
+            # Create a new user object but avoid saving it yet 
+            new_user = user_form.save(commit=False) 
+            # Set the chosen password 
+            new_user.set_password(user_form.cleaned_data['password']) 
+            # Save the User object 
+            new_user.save() 
+            return render(request, 'plants/registration_pass.html', {'new_user': new_user}) 
+    else: 
+        user_form = UserRegistrationForm() 
+    return render( 
+        request, 
+        'plants/registration.html', 
+        { 
+            'user_form': user_form 
+        })
 

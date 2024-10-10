@@ -1,5 +1,23 @@
 {% extends 'plants/layout.html' %}
+{% load static %}
 {% block content %}
+<div id="osnovnie_photo">
+    <div class="pr">
+        <a href="{% url 'room_plant' %}">
+         <img class="komnata" src="{% static 'plants/komnata.webp' %}" >
+        </a>
+    </div>
+    <div class="pr">
+     <a href="{% url 'office_plant' %}">
+      <img class="office" src="{% static 'plants/office.png' %}" >
+     </a>
+    </div>
+    <div class="pr">
+     <a href="{% url 'exzotic' %}">
+      <img class="neprihotlivie" src="{% static 'plants/exzotic.jpg' %}" >
+     </a>
+    </div>
+</div>
 <div id='best'>
  <h2>Лучшие предложения</h2>
 </div>

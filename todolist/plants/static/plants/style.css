@@ -23,3 +23,13 @@ a:hover {
 .main{
     color: rgb(144, 223, 142);
 }
+a.ssilka_rastenie{
+    color:white;
+}
+a.main{
+    color: rgb(144, 223, 142);
+}
+a:hover img {        /* прозрачность*/
+    transform: scale(1.1); /* во сколько увеличивать*/
+    transition: 1s; /* Время эффекта */
+  }

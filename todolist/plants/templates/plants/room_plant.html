@@ -1,4 +1,19 @@
 {% extends 'plants/layout.html' %}
+{% load static %}
 {% block content %}
-<h1></h1>
+<h1>Комнатные растения</h1>
+<div class="raspoloshenie_room_plants">
+    <div>
+      <img class="aglaonema" src="{% static 'plants/aglaonema.jpg' %}" >
+       <p>Аглаонема Констатум Старс 5/12-5/16</p>
+       <button class=" plus" data-id="aglaonema_pl">+</button>
+       <button class=" minus" data-id="aglaonema_pl">-</button>
+
+    </div>
+    <div>
+      <img class="aglaonema" src="{% static 'plants/1857.jpg' %}" >
+       <p>Филодендрон Вайт Принцесс</p>
+       <button class="button">Добавить</button>
+    </div>
+</div>
 {% endblock %}
