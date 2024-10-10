@@ -21,5 +21,5 @@ urlpatterns = [
     path('exzotic/',views.exzotic,name = 'exzotic'),
     path('zakaz/',views.zakaz,name = 'zakaz'),
     path('register/', views.register, name='register'),
-    path('',views.index,name = 'index'),
+    path('/',views.index,name = 'index'),
 ]
